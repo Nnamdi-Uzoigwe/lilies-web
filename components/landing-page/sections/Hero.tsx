@@ -5,7 +5,7 @@ const Hero = () => {
     <div className="py-10 flex flex-col-reverse lg:flex-row items-center px-6 lg:px-50 justify-between">
       {/* Content */}
       <div className="flex flex-col gap-4 mt-4 lg:mt-0">
-        <h1 className="text-white text-center lg:text-left text-2xl lg:text-5xl w-full lg:w-[80%]">
+        <h1 className="text-white text-center lg:text-left font-semibold text-2xl lg:text-5xl w-full lg:w-[80%]">
           Order <span className="text-[#FBDDBB]">food</span> anywhere, anytime
         </h1>
         <p className="w-full lg:w-[70%] text-center lg:text-left  mb-0 pb-0 text-white">
