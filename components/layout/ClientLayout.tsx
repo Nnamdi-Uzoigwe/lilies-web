@@ -4,7 +4,7 @@ import { usePathname } from "next/navigation"
 import Navbar from "@/components/layout/Navbar"
 import Footer from "@/components/layout/Footer"
 
-const HIDDEN_LAYOUT_PATHS = ["/login", "/signup", "/dashboard"]
+const HIDDEN_LAYOUT_PATHS = ["/login", "/signup", "/dashboard", "/dashboard/profile", "/dashboard/cart", "/dashboard/orders"]
 
 const ClientLayout = ({ children }: { children: React.ReactNode }) => {
   const pathname = usePathname()

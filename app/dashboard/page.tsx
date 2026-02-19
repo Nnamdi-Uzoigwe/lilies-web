@@ -1,7 +1,10 @@
+import DashboardHeader from "@/components/dashboard/sections/DashboardHeader";
+import { DashboardLayout } from "../../components/dashboard/ui/DashboardLayout";
+
 export default function UserDashboard() {
     return (
-        <div>
-            User Dashboard Page
-        </div>
+        <DashboardLayout>
+            <DashboardHeader />
+        </DashboardLayout>
     )
 }

@@ -3,14 +3,16 @@ import Image from "next/image";
 
 export default function Signup() {
     return (
-        <div className="grid grid-cols-1 lg:grid-cols-2 min-h-screen h-auto gap-0">
+        <div className="flex justify-center items-center h-screen gap-0">
               {/* Image Container */}
-              <div className="hidden lg:block relative  w-full">
+              <div className="hidden lg:block relative h-screen w-full">
                 <Image src="/signup-image.png" fill alt="Login image" />
               </div>
               
               {/* Login Form */}
-              <SignupForm />
+              <div className="w-full">
+                <SignupForm />
+              </div>
             </div>
     )
 }

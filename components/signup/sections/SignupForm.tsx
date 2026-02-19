@@ -6,15 +6,15 @@ import Link from "next/link";
     const SignupForm = () => {
       const [show, setShow] = useState(false);
       return (
-        <div className="flex flex-col justify-center items-center gap-6 px-6 lg:px-36">
-            <h4 className="text-(--primary) font-semibold text-xl mb-10">Welcome to Lilies!</h4>
+        <div className="flex flex-col gap-6 px-6 lg:px-36">
+            <h4 className="text-(--primary) font-semibold text-center text-xl mb-10">Welcome to Lilies!</h4>
     
             {/* First name */}
             <div>
                 <input 
                     type="text"
                     placeholder="Your first name"
-                    className="border border-[#FBDDBB] p-4 w-full min-w-120 rounded-md"
+                    className="border border-[#FBDDBB] p-4 w-full rounded-md"
                 />
             </div>
 
@@ -23,7 +23,7 @@ import Link from "next/link";
                 <input 
                     type="text"
                     placeholder="Your email address"
-                    className="border border-[#FBDDBB] p-4 w-full min-w-120 rounded-md"
+                    className="border border-[#FBDDBB] p-4 w-full rounded-md"
                 />
             </div>
             {/* Password */}
@@ -31,7 +31,7 @@ import Link from "next/link";
                 <input 
                     type={show ? "string" : "password"}
                     placeholder="Your password"
-                    className="border border-[#FBDDBB] p-4 w-full min-w-120 rounded-md"
+                    className="border border-[#FBDDBB] p-4 w-full rounded-md"
                 />
                 <p onClick={() => setShow(show => !show)} className="absolute font-semibold cursor-pointer top-4 right-3">{show ? "Hide" : "Show"}</p>
             </div>

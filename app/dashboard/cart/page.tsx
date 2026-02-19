@@ -1,7 +1,9 @@
+import { DashboardLayout } from "@/components/dashboard/ui/DashboardLayout";
+
 export default function Cart() {
     return (
-        <div>
+        <DashboardLayout>
             Cart Page
-        </div>
+        </DashboardLayout>
     )
 }
