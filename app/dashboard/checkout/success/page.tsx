@@ -34,17 +34,15 @@
 //     </div>
 //   );
 // }
-
-
 "use client";
 
 import Link from "next/link";
 import { useCartStore } from "@/store/useCartStore";
-import { useEffect, useState } from "react";
+import { useEffect, useState, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 import { useSession } from "next-auth/react";
 
-export default function CheckoutSuccess() {
+function CheckoutSuccessContent() {
   const clearCart = useCartStore((state) => state.clearCart);
   const searchParams = useSearchParams();
   const { data: session } = useSession();
@@ -107,25 +105,17 @@ export default function CheckoutSuccess() {
   return (
     <div className="min-h-screen bg-[#f9f9f9] flex items-center justify-center px-4">
       <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-10 max-w-md w-full text-center">
-
-        {/* Icon */}
         <div className="w-20 h-20 bg-green-50 rounded-full flex items-center justify-center mx-auto mb-6">
           <svg className="w-10 h-10 text-[#00302E]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
             <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
           </svg>
         </div>
-
-        {/* Text */}
         <h2 className="text-2xl font-bold text-[#00302E] mb-2">Order Confirmed!</h2>
         <p className="text-gray-400 text-sm mb-1">
           Thank you{session?.user?.name ? `, ${session.user.name.split(" ")[0]}` : ""}!
         </p>
         <p className="text-gray-400 text-sm mb-8">Your food is being prepared and will be on its way soon. 🍽️</p>
-
-        {/* Divider */}
         <div className="border-t border-gray-100 mb-8" />
-
-        {/* Actions */}
         <div className="flex flex-col gap-3">
           <Link
             href="/dashboard/orders"
@@ -142,5 +132,17 @@ export default function CheckoutSuccess() {
         </div>
       </div>
     </div>
+  );
+}
+
+export default function CheckoutSuccess() {
+  return (
+    <Suspense fallback={
+      <div className="min-h-screen bg-[#f9f9f9] flex items-center justify-center">
+        <div className="w-12 h-12 border-4 border-[#00302E] border-t-transparent rounded-full animate-spin" />
+      </div>
+    }>
+      <CheckoutSuccessContent />
+    </Suspense>
   );
 }
