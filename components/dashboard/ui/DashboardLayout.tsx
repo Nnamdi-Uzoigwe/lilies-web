@@ -24,7 +24,7 @@ export const DashboardLayout: React.FC<DashboardLayoutProps> = ({
       >
         <Header onMenuClick={() => setIsSidebarOpen(true)} />
 
-        <main className="flex-1 overflow-y-auto  p-4 pt-8 bg-white">{children}</main>
+        <main className="flex-1 overflow-y-auto px-6 lg:px-20  p-4 pt-8 bg-white">{children}</main>
       </div>
     </div>
   );
