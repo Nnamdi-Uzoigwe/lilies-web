@@ -33,6 +33,25 @@ export default function CartPage() {
   const formatPrice = (amount: number) =>
     `₦${amount.toLocaleString("en-NG")}`;
 
+  const handleCheckout = async () => {
+  const res = await fetch("/api/paystack/initialize", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({
+      email: "user@example.com", // replace with actual user email later
+      amount: total, // already in naira, API route converts to kobo
+    }),
+  });
+
+  const data = await res.json();
+
+  if (data.authorization_url) {
+    window.location.href = data.authorization_url; // redirect to Paystack checkout
+  } else {
+    alert("Something went wrong. Please try again.");
+  }
+};
+
   if (items.length === 0) {
     return (
       <div className="flex flex-col items-center justify-center min-h-[60vh] gap-4">
@@ -66,7 +85,7 @@ export default function CartPage() {
         {items.map((item) => (
           <div
             key={item.id}
-            className="flex items-center gap-4 p-4 border border-gray-100 rounded-xl shadow-sm bg-white"
+            className="flex items-center gap-4 p-4"
           >
             {/* Food Image */}
             <div className="w-14 h-14 relative shrink-0">
@@ -122,7 +141,7 @@ export default function CartPage() {
       </div>
 
       {/* Order Summary */}
-      <div className="mt-8 border border-gray-100 rounded-xl p-6 bg-white shadow-sm">
+      <div className="mt-8 p-6 ">
         <h2 className="font-semibold text-(--primary) text-base mb-4">Order Summary</h2>
 
         <div className="flex flex-col gap-3 text-sm">
@@ -142,11 +161,8 @@ export default function CartPage() {
 
         {/* Checkout Button — wire up Paystack here later */}
         <button
-          className="mt-6 w-full bg-[#06E775] hover:bg-[#04c862] transition-colors text-white font-semibold py-4 rounded-xl text-sm"
-          onClick={() => {
-            // TODO: integrate Paystack here
-            alert("Proceeding to checkout...");
-          }}
+          className="mt-6 w-full bg-[#00302E] cursor-pointer hover:bg-[#00302E] transition-colors text-[#F3C294] font-semibold py-4 rounded-xl text-sm"
+          onClick={handleCheckout}
         >
           Proceed to Checkout · {formatPrice(total)}
         </button>

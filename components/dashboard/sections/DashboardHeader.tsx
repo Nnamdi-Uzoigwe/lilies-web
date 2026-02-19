@@ -10,9 +10,9 @@ const DashboardHeader = () => {
         </div>
 
         {/* User Avatar */}
-        <div className="bg-[#00302E] h-10 w-10 rounded-full flex justify-center items-center">
+        {/* <div className="bg-[#00302E] h-10 w-10 rounded-full flex justify-center items-center">
             <p className="text-white">{username.slice(0,2).toUpperCase()}</p>
-        </div>
+        </div> */}
     </div>
   )
 }

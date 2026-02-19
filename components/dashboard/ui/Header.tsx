@@ -7,8 +7,9 @@ interface HeaderProps {
 }
 
 const Header = ({ onMenuClick }: HeaderProps) => {
+  const username = "Nnamdi"
   return (
-<div className='h-23 bg-[#f2f2f2] px-4 flex items-center border-b border-gray-200'>
+<div className='h-23 bg-[#f2f2f2] px-4 flex items-center justify-between border-b border-gray-200'>
          {/* Left Section */}
       <div className="flex items-center space-x-4">
         <button
@@ -17,6 +18,14 @@ const Header = ({ onMenuClick }: HeaderProps) => {
         >
           <AiOutlineMenu size={24} className="text-[#F4F4F5]" />
         </button>
+      </div>
+
+      <div className='flex justify-end'>
+          <div>
+            <div className="bg-[#00302E] h-10 w-10 rounded-full flex justify-center items-center">
+            <p className="text-white">{username.slice(0,2).toUpperCase()}</p>
+        </div>
+          </div>
       </div>
     </div>
   )
