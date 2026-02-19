@@ -3,6 +3,8 @@
 import React, { useState } from "react";
 import { Sidebar } from "./Sidebar";
 import Header from "./Header";
+import { Toaster } from "react-hot-toast";
+
 
 interface DashboardLayoutProps {
   children: React.ReactNode;
@@ -26,6 +28,7 @@ export const DashboardLayout: React.FC<DashboardLayoutProps> = ({
 
         <main className="flex-1 overflow-y-auto px-6 lg:px-20  p-4 pt-8 bg-white">{children}</main>
       </div>
+      <Toaster position="bottom-right" />
     </div>
   );
 };

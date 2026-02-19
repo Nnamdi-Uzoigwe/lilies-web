@@ -4,11 +4,9 @@ import { usePathname } from "next/navigation"
 import Navbar from "@/components/layout/Navbar"
 import Footer from "@/components/layout/Footer"
 
-const HIDDEN_LAYOUT_PATHS = ["/login", "/signup", "/dashboard", "/dashboard/profile", "/dashboard/cart", "/dashboard/orders"]
-
 const ClientLayout = ({ children }: { children: React.ReactNode }) => {
   const pathname = usePathname()
-  const hideLayout = HIDDEN_LAYOUT_PATHS.includes(pathname)
+  const hideLayout = pathname.startsWith("/dashboard") || ["/login", "/signup"].includes(pathname)
 
   return (
     <>

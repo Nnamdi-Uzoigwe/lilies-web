@@ -1,6 +1,6 @@
 export const productData = [
   {
-    id: 1,
+    id: "1",
     name: "Burger Meal",
     shortDescription:
       "A satisfying burger meal served with crispy fries and a refreshing drink.",
@@ -12,10 +12,11 @@ export const productData = [
     enjoy a chilled beverage of your choice. It's a hearty and delicious option for lunch or dinner.`,
     image: "/burgermeal-img.svg",
     price: "₦5,000",
+    timeToCook: "20 minutes",
     quantityInStock: 20
   },
   {
-    id: 2,
+    id: "2",
     name: "Stir Fry Pasta",
     shortDescription:
       "Flavorful pasta tossed with fresh vegetables and savory stir-fry sauce.",
@@ -27,10 +28,11 @@ export const productData = [
     Enjoy it as a wholesome main dish any time of the day.`,
     image: "/pasta-img.svg",
     price: "₦4,000",
+    timeToCook: "45 minutes",
     quantityInStock: 20
   },
   {
-    id: 3,
+    id: "3",
     name: "Meatballs",
     shortDescription: "Juicy, tender meatballs simmered in a rich, flavorful sauce.",
     longDescription:
@@ -41,10 +43,11 @@ export const productData = [
       It's a classic dish made with love and tradition.`,
     image: "/meatball-img.svg",
     price: "₦6,000",
+    timeToCook: "8 minutes",
     quantityInStock: 20
   },
   {
-    id: 4,
+    id: "4",
     name: "Banana Toast",
     shortDescription:
       "Crispy toasted bread topped with sweet, fresh banana slices.",
@@ -55,10 +58,11 @@ export const productData = [
       comforting, wholesome, and deliciously satisfying.`,
     image: "/bananatoast-img.svg",
     price: "₦5,000",
+    timeToCook: "15 minutes",
     quantityInStock: 20
   },
   {
-    id: 5,
+    id: "5",
     name: "Chinese Noodles",
     shortDescription:
       "Savory Chinese-style noodles tossed with vegetables and flavorful sauce.",
@@ -69,10 +73,11 @@ export const productData = [
     and comfort in every bowl.`,
     image: "/chinesenoodles-img.svg",
     price: "₦11,000",
+    timeToCook: "30 minutes",
     quantityInStock: 20
   },
   {
-    id: 6,
+    id: "6",
     name: "Chicken Soup",
     shortDescription:
       "Warm and comforting chicken soup made with tender chicken and fresh herbs.",
@@ -83,6 +88,7 @@ export const productData = [
     soup feels like home in a bowl. Simple, hearty, and timelessly delicious.`,
     image: "/chickensoup-img.svg",
     price: "₦14,000",
+    timeToCook: "1 hour",
     quantityInStock: 30
   },
 ];
