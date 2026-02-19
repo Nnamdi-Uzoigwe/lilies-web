@@ -1,4 +1,6 @@
-import React from 'react'
+"use client"
+
+import { useSession } from 'next-auth/react';
 import { AiOutlineMenu } from 'react-icons/ai';
 
 
@@ -7,7 +9,7 @@ interface HeaderProps {
 }
 
 const Header = ({ onMenuClick }: HeaderProps) => {
-  const username = "Nnamdi"
+  const { data: session } = useSession();
   return (
 <div className='h-23 bg-[#f2f2f2] px-4 flex items-center justify-between border-b border-gray-200'>
          {/* Left Section */}
@@ -23,7 +25,7 @@ const Header = ({ onMenuClick }: HeaderProps) => {
       <div className='flex justify-end'>
           <div>
             <div className="bg-[#00302E] h-10 w-10 rounded-full flex justify-center items-center">
-            <p className="text-white">{username.slice(0,2).toUpperCase()}</p>
+            <p className="text-white">{session?.user?.name?.slice(0,2).toUpperCase()  || "G"}</p>
         </div>
           </div>
       </div>
