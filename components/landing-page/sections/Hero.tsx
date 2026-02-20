@@ -15,21 +15,19 @@ const Hero = () => {
 
         {/* badges */}
         <div className="mt-0 pt-0 flex gap-2 justify-center lg:justify-start items-center">
-          <div className="relative pt-0 h-40 w-40">
             <Image
-              src="/playstore-badge.svg"
-              fill
+              src="/playstore-badge.png"
+              height={120}
+              width={160}
               alt="Playstore badge image"
             />
-          </div>
-          <div className="relative h-40 w-40">
-            <Image src="/appstore-badge.svg" fill alt="Appstore badge image" />
-          </div>
+   
+            <Image src="/appstore-badge.png" height={120} width={160} alt="Appstore badge image" />
         </div>
       </div>
       {/* Image */}
       <div className="relative h-60 lg:h-100 w-60 lg:w-100">
-        <Image src="/hero-image.svg" fill alt="hero image" />
+        <Image src="/hero-image.png" fill alt="hero image" />
       </div>
     </div>
   );

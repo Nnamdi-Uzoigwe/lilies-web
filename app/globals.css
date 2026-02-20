@@ -9,6 +9,26 @@ body {
   --secondary: #FBDDBB;
 }
 
+@layer base {
+  button {
+    @apply transition-transform duration-150 ease-out cursor-pointer;
+  }
+
+  button:active {
+    @apply scale-90;
+  }
+  
+ @layer base {
+  a {
+    @apply transition-transform duration-150 ease-out cursor-pointer;
+  }
+
+  a:active {
+    @apply scale-90;
+  }
+}
+
+}
 
 /* Primary Color: #00302E */
 /* Secondary Color: #FBDDBB */

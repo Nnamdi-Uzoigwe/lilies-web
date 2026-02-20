@@ -7,9 +7,9 @@ const Footer = () => {
   return (
     <section className="bg-[#0B0D17] text-white ">
 
-        <div className="py-10 px-6 lg:px-50 flex flex-col lg:flex-row justify-between">
+        <div className="py-10 px-6 lg:px-50 flex flex-col gap-6 lg:flex-row justify-between">
             <div>
-                <h4 className="text-lg font-semibold mb-6">Company</h4>
+                <h4 className="text-lg font-semibold mb-2 lg:mb-6">Company</h4>
                 
                 <div className="flex flex-col gap-2">
                     <p>About Us</p>
@@ -19,7 +19,7 @@ const Footer = () => {
             </div> 
 
             <div>
-                <h4 className="text-lg font-semibold mb-6">Support</h4>
+                <h4 className="text-lg font-semibold mb-2 lg:mb-6">Support</h4>
                 
                 <div>
                     <p>Help Center</p>
@@ -28,7 +28,7 @@ const Footer = () => {
             </div> 
 
             <div>
-                <h4 className="text-lg font-semibold mb-6">Legal</h4>
+                <h4 className="text-lg font-semibold mb-2 lg:mb-6">Legal</h4>
                 
                 <div>
                     <p>Cookies Policy</p>
@@ -39,19 +39,19 @@ const Footer = () => {
             </div> 
 
             <div>
-                <h4 className="text-lg font-semibold mb-6">Install App</h4>
+                <h4 className="text-lg font-semibold mb-2 lg:mb-6">Install App</h4>
                 
                 <div className="flex flex-col gap-4">
 
                     <Image 
-                        src="/playstore-badge.svg"
+                        src="/playstore-badge.png"
                         height={120}
                         width={120}
                         alt="Playstore badge"
                     />
                 
                     <Image 
-                        src="/appstore-badge.svg"
+                        src="/appstore-badge.png"
                         height={120}
                         width={120}
                         alt="Appstore badge"
@@ -61,7 +61,7 @@ const Footer = () => {
             </div> 
         </div>
 
-        <div className="border-t border-gray-600 py-6 px-6 lg:px-50 flex justify-between items-center">
+        <div className="border-t border-gray-600 py-6 px-6 lg:px-50 flex flex-col lg:flex-row gap-3 justify-between items-center">
             <p className="text-sm">
                 &copy; 2026 LILIES, All rights reserved
             </p>

@@ -30,7 +30,7 @@ const Navbar = () => {
         <Link href="/login" className="text-white">
           Login
         </Link>
-        <Link href="/signup" className="bg-[#FBDDBB] p-2 font-semibold rounded-md text-(--primary)">
+        <Link href="/signup" className="bg-[#FBDDBB] py-2 px-14 font-semibold rounded-md text-(--primary)">
           Signup
         </Link>
       </div>
@@ -55,7 +55,7 @@ const Navbar = () => {
           </Link>
           <Link
             href="/signup"
-            className="bg-[#FBDDBB] px-4 py-2 font-semibold rounded-md text-(--primary)"
+            className="bg-[#FBDDBB] px-14 py-2 font-semibold rounded-md text-(--primary)"
             onClick={() => setMenuOpen(false)}
           >
             Signup
